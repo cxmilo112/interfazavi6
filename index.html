@@ -41,57 +41,94 @@
             margin-top: 80px;
             padding: 20px;
         }
+        #login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">AVI</a>
+    <div id="login-section">
+        <div class="card p-4 shadow" style="width: 300px;">
+            <h4 class="mb-3 text-center">Iniciar Sesión</h4>
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario">
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena">
+            </div>
+            <button class="btn btn-primary w-100" onclick="login()">Entrar</button>
         </div>
-    </nav>
-
-    <div class="sidebar">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Programas</a>
-        <a href="#">Contacto</a>
     </div>
 
-    <div class="content container">
-        <h3>Bienvenido al Sistema AVI</h3>
-        <p>Has accedido correctamente al sistema.</p>
+    <div id="main-content" style="display:none;">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">AVI</a>
+            </div>
+        </nav>
 
-        <div class="card mt-4">
-            <div class="card-body">
-                <h5 class="card-title">Formulario de Registro</h5>
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="correo">
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono">
-                    </div>
-                    <button type="submit" class="btn btn-success">Registrar</button>
-                </form>
+        <div class="sidebar">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Programas</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div class="content container">
+            <h3>Bienvenido al Sistema AVI</h3>
+            <p>Has accedido correctamente al sistema.</p>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Formulario de Registro</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="correo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono">
+                        </div>
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h4>Información del Sistema AVI</h4>
+                <p>El Sistema AVI ofrece una plataforma centralizada para gestionar información institucional del SENA. A través de esta plataforma, los usuarios pueden acceder a servicios, programas académicos, noticias y recursos de contacto.</p>
+                <ul>
+                    <li>Acceso a programas de formación profesional</li>
+                    <li>Consultas de servicios y soporte</li>
+                    <li>Actualizaciones y noticias del SENA</li>
+                    <li>Soporte personalizado y contacto directo</li>
+                </ul>
             </div>
         </div>
-
-        <div class="mt-5">
-            <h4>Información del Sistema AVI</h4>
-            <p>El Sistema AVI ofrece una plataforma centralizada para gestionar información institucional del SENA. A través de esta plataforma, los usuarios pueden acceder a servicios, programas académicos, noticias y recursos de contacto.</p>
-            <ul>
-                <li>Acceso a programas de formación profesional</li>
-                <li>Consultas de servicios y soporte</li>
-                <li>Actualizaciones y noticias del SENA</li>
-                <li>Soporte personalizado y contacto directo</li>
-            </ul>
-        </div>
     </div>
+
+    <script>
+        function login() {
+            const usuario = document.getElementById("usuario").value;
+            const contrasena = document.getElementById("contrasena").value;
+
+            if (usuario === "admin" && contrasena === "1234") {
+                document.getElementById("login-section").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        }
+    </script>
 </body>
 </html>
