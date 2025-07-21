@@ -1,0 +1,393 @@
+/* Estilos para el menú lateral */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    /* Inicialmente oculto */
+    background-color: #1a365d;
+    overflow-x: hidden;
+    padding-top: 70px;
+    transition: 0.5s;
+    color: white;
+}
+
+/* Estilos para los enlaces dentro del menú lateral */
+.sidebar-item {
+    padding: 15px 25px;
+    /* Espacio alrededor del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    color: white;
+    /* Color del texto */
+    display: block;
+    /* Mostrar como bloque */
+    transition: 0.3s;
+    /* Transición suave */
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    width: 20px;
+    /* Ancho fijo para los iconos */
+    text-align: center;
+    /* Centrar los iconos */
+    display: inline-block;
+    /* Alinear en línea */
+}
+
+/* Estilos para los enlaces del menú lateral al pasar el ratón */
+.sidebar-item:hover {
+    background-color: #38a169;
+    /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+    position: absolute;
+    /* Posición absoluta */
+    top: 0;
+    /* En la parte superior */
+    right: 22px;
+    /* En la derecha */
+    font-size: 36px;
+    /* Tamaño de la fuente */
+    margin-left: 50px;
+    /* Margen izquierdo */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos específicos para el logo del SENA */
+.sidebar-item.sena {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sena-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Estilos para el contenido principal cuando el menú está abierto */
+.main-content {
+    margin-left: 0;
+    /* Inicialmente sin margen */
+    transition: margin-left .5s;
+    /* Transición suave */
+}
+
+.main-content.shift {
+    margin-left: 250px;
+    /* Ajustar margen cuando el menú se abre */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #1a365d;
+    /* Azul oscuro para el encabezado */
+    color: #ffffff;
+    /* Texto blanco */
+    padding: 1.5rem 0;
+    /* Padding vertical */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    position: sticky;
+    /* Encabezado fijo en la parte superior */
+    top: 0;
+    z-index: 1000;
+    /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Estilos para el contenedor principal dentro del encabezado */
+header .container {
+    display: flex;
+    /* flex para alinear logo y navegación */
+    justify-content: space-between;
+    /* Espacio entre logo y navegación */
+    align-items:  center;
+    /* Alinear verticalmente al centro */
+    max-width: 1200px;
+    /* Ancho máximo */
+    margin: 0 auto;
+    /* Centrar el contenedor */
+    padding: 0 1rem;
+    /* Padding horizontal */
+}
+
+/* Estilos para el contenedor del título y la imagen */
+.header-title-container {
+    display: flex;
+    align-items:center;
+}
+
+/* Estilos para la imagen del logo en el encabezado */
+.header-logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilos para el título del colegio en el encabezado */
+header .text-2xl {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none;
+    /* Eliminar viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Usar flexbox para alinear los elementos de la lista */
+    gap: 1rem;
+    /* Espacio entre elementos de la lista */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: center;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilos para los enlaces de navegación al pasar el ratón */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estilos para el contenido principal */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Estilos para cada sección de contenido */
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos de sección */
+section h2 {
+    color: #2c5282;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos para los subtítulos dentro de las secciones */
+section h3 {
+    color: #2d3748;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #3182ce;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Estilos para los botones al pasar el ratón */
+button:hover {
+    background-color: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+/* Estilos para los contenedores de salida de texto */
+#gestion-output,
+#tareas-output,
+#evaluaciones-output,
+#admisiones-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #edf2f7;
+    border-left: 4px solid #3182ce;
+    border-radius: 0.25rem;
+    color: #2d3748;
+}
+
+/* Estilos para las imágenes dentro de las secciones */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto del pie de página */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Estilos para los elementos de lista dentro de la oferta académica */
+#oferta-academica ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+/* Estilos para los enlaces dentro de las secciones (ej. Noticias, Servicios Online) */
+section a {
+    color: #3182ce;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para los enlaces dentro de las secciones al pasar el ratón */
+section a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+/* Estilos específicos para los elementos dentro de las tarjetas  */
+.bg-gray-100 {
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+}
+
+.bg-gray-100 h3 {
+    color: #2d3748;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+}
+
+.bg-gray-100 p {
+    color: #4a5568;
+   
+    font-size: 1rem;
+   
+}
+.lead{
+    color: #2c5282;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    
+}
+#sena{
+    display: flex;
+    height: 6vh;
+    width: 6vh;
+    left: 250px;
+}
+
+
+/* Estilos para el menú lateral */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000; /* Asegurar que esté por encima de todo */
+    top: 0;
+    left: -250px; /* Inicialmente oculto */
+    background-color: #1a365d;
+    overflow-x: hidden;
+    padding-top: 70px;
+    transition: left 0.5s ease; /* Transición suave para la propiedad 'left' */
+    color: white;
+}
+
+/* Estilos para el menú lateral cuando está abierto */
+.sidebar.open {
+    left: 0; /* Se muestra completamente */
+}
+
+/* Estilos para los enlaces dentro del menú lateral */
+.sidebar-item {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Estilos para los enlaces del menú lateral al pasar el ratón */
+.sidebar-item:hover {
+    background-color: #38a169;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos específicos para el logo del SENA en el sidebar */
+.sidebar-item.sena {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+}

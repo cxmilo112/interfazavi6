@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVI - Sistema</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .navbar {
+            background-color: #1a3a90;
+        }
+        .navbar-brand, .nav-link, .navbar-text {
+            color: #fff !important;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #1a3a90;
+            color: white;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #274bb1;
+        }
+        .content {
+            margin-left: 260px;
+            margin-top: 80px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AVI</a>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Programas</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <div class="content container">
+        <h3>Bienvenido al Sistema AVI</h3>
+        <p>Has accedido correctamente al sistema.</p>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Formulario de Registro</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono">
+                    </div>
+                    <button type="submit" class="btn btn-success">Registrar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h4>Información del Sistema AVI</h4>
+            <p>El Sistema AVI ofrece una plataforma centralizada para gestionar información institucional del SENA. A través de esta plataforma, los usuarios pueden acceder a servicios, programas académicos, noticias y recursos de contacto.</p>
+            <ul>
+                <li>Acceso a programas de formación profesional</li>
+                <li>Consultas de servicios y soporte</li>
+                <li>Actualizaciones y noticias del SENA</li>
+                <li>Soporte personalizado y contacto directo</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
